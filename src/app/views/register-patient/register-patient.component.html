@@ -1,0 +1,19 @@
+<h3 class="text-primary">Registro de Paciente</h3>
+
+<div class="row">
+    <form action="" [formGroup]="patientForm">
+        <div class="mb-3 col-md-6">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="Nome">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="age" class="form-label">Idade:</label>
+            <input type="number" class="form-control" id="age" formControlName="age"  placeholder="Idade">
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" (click)="save()" class="btn btn-outline-success col-md-12">Registrar</button>
+    </div>
+</div>

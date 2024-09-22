@@ -1,0 +1,25 @@
+<h3 class="text-primary">Calculadora: Indice de Massa Corporal</h3>
+
+<div class="row">
+    <form action="" [formGroup]="imcForm">
+        <div class="mb-3 col-md-6">
+            <label for="height" class="form-label">Altura</label>
+            <input type="number" class="form-control" id="height" formControlName="height" step="0.01" placeholder="Altura:">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="weight" class="form-label">Peso</label>
+            <input type="number" class="form-control" id="weight" formControlName="weight" step="0.01" placeholder="Peso:">
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <button type="button" (click)="calculateIMC()" class="btn btn-primary col-md-12">Calculate</button>
+    </div>
+</div>
+<hr>
+<div class="row" *ngIf="imcResult !== 0">
+    <div class="col-md-12">
+        Seu IMC é : {{imcResult}}
+    </div>
+</div>
